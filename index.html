@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pierwszy komponent w React.js</title>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone/babel.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+</head>
+
+<body>
+
+  </br></br></br></br></br></br></br>
+
+  <div id="app"></div>
+
+  <script type="text/babel">
+
+    function App() {
+      return (
+        <div>
+          <Header />
+          <Main />
+        </div>
+
+      );
+    }
+    function Header() {
+      return (
+        <header className="ui fixed menu">
+          <nav className="ui container">
+            <a href="#" className="header item">
+              
+              Biblioteka Corona
+            </a>
+            <div className="header item">
+              <button className="ui button">Dodaj</button>
+            </div>
+          </nav>
+        </header>
+      );
+    }
+    function Main() {
+      return (
+        <main className="ui main text container">
+          <UsersList />
+        </main>);
+    }
+    function UsersList() {
+      return (<ul className="ui relaxed divided list selection">
+        <UsersItem  name="Piotr Brodziak" description="Full Stack Developer" />
+        <UsersItem  name="Marek Udziela" description="Senior Azure DevOps"/>
+        <UsersItem  name="Maciej Dubaj" description="Senior Phyton Data Scientist"/>
+        <UsersItem  name="Michał Redek" description="Senior SQL Tester" />
+      </ul>);
+    }
+    function UsersItem({profilePicture, name, description}){
+      
+      
+      return (
+        <li className="item">
+          <AvatarSRC />
+          <img src className="ui mini rounded image" />
+          <div className="content">
+            <h4 className="header">{name}</h4>
+            <div className="description">{description}</div>
+          </div>
+        </li>
+      );
+    }
+    function AvatarSRC(){
+        var minn=0;    
+        var maxx=7;
+        var min = Math.ceil(minn);
+        var max = Math.floor(maxx);
+        var i = Math.floor(Math.random() * (max - min)) + min;
+      
+      const imgUrl =
+      [
+      <img src="https://gravatar.com/avatar/d01dd72377841506eb3c6762765bb011?s=400&d=robohash&r=x" className='ui mini rounded image' />,
+      <img src="https://gravatar.com/avatar/3a67e7c06cfa757e2573641c400ae536?s=400&d=robohash&r=x" className="ui mini rounded image" />,
+      <img src="https://gravatar.com/avatar/4174e4c46ba23336151f5210ff6b0f2e?s=400&d=robohash&r=x" className="ui mini rounded image" />,
+      <img src="https://gravatar.com/avatar/de66ba80581a8ec0298d1694829e5136?s=400&d=robohash&r=x" className="ui mini rounded image" />,
+      <img src="https://gravatar.com/avatar/cfb02201bc52a406a694ca578d2b1c9d?s=400&d=robohash&r=x" className="ui mini rounded image" />,
+      <img src="https://gravatar.com/avatar/cfb02201bc52a406a694ca578d2b1c9d?s=400&d=robohash&r=x" className="ui mini rounded image" />,
+      <img src="https://gravatar.com/avatar/bcb674b7fd0a5098df4b3bac059cbe70?s=400&d=robohash&r=x" className="ui mini rounded image" />,
+      <img src="https://gravatar.com/avatar/61917bd092f1264cbf9a707cb49b2a86?s=400&d=robohash&r=x" className="ui mini rounded image" />
+
+      ]
+      
+      // var i = Math.floor(Math.random()*0+7)
+      return(
+          imgUrl[i]
+      );
+    }
+
+    ReactDOM.render(
+      (
+        <div><App /></div>
+      ),
+      document.getElementById('app')
+
+    );
+  </script>
+</body>
+
+</html>
