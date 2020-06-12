@@ -3,7 +3,7 @@ import { Component } from 'react';
 import './Header.css';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
-
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 
 class Header extends Component {
@@ -18,14 +18,14 @@ class Header extends Component {
                             Biblioteka Corona
                             </h2>
                         </div>
-                    <div class="header-right">
-                        <a class="active" href="#home">Home</a>
-                        <a href="#contact">Contact</a>
-                        <a href="#about">About</a>
-                        <a href="#login">Login</a>
+                    <div className="header-right">
+                        <Link to="/"><a className="active">Home</a></Link>
+                        <Link to="/Contact"><a>Kontakt</a></Link>
+                        <Link to="/Books"><a>Nasze książki</a></Link>
+                        <Link to="/About"><a >O bibliotece</a></Link>
+                        <Link to="/login"><a >Zaloguj się</a></Link>
                     </div>
                 </div>
-
                 <div className="HeaderH">
                     <h>
                         Witaj w naszej bibliotece!

@@ -40,14 +40,13 @@ class Book extends React.Component {
     }
 
     filterbooks(e) {
-       
-        const text = e.currentTarget.value;
-        const filteredBooks = this.getFilteredBooksForText(text)
-        this.setState({
-            filteredBooks
-        })
+            const text = e.currentTarget.value;
+            const filteredBooks = this.getFilteredBooksForText(text)
+            this.setState({
+                filteredBooks
+            })
     }
-
+    
     getFilteredBooksForText(text) {
         const filteredBooks = this.state.filteredBooks;
         return filteredBooks.filter(book => book.title.toLowerCase().includes(
@@ -58,6 +57,8 @@ class Book extends React.Component {
     render() {
         return (
             <div>
+                <br/>
+                <br/>
                 <button type="button" className="ui blue button" onClick={this.printD} >Pokaż bazę Książek i autorów</button>
                 <button type="button" className="ui blue button" onClick={this.DelateprintD} >Schowaj bazę Książek i autorów</button>
                 <input placeholder="Wyszukaj książkę..  "  onInput={this.filterbooks.bind(this)} />
@@ -90,7 +91,7 @@ const BooksList = ({ books }) => {
 
 
     return (
-        <p>No results!</p>
+        <p>Brak księżek!</p>
     );
 };
 

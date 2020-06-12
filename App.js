@@ -8,6 +8,9 @@ import Footer from './Footer.js';
 import Main from './Main.js';
 import Button from 'react-bootstrap/Button';
 import Search from './Search';
+import Login from './Login';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
 
 function App() {
   return (
@@ -18,11 +21,14 @@ function App() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"></link>
         {/* Boodstrap */}
       </Helmet>
-      <Header/>
-      <Main />
+      <Router>
+        <Header/>
+        <Main />
+      </Router>
       <Footer/>
     </div>
   );
 }
+
 
 export default App;
