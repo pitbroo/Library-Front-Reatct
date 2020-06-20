@@ -2,17 +2,19 @@
 .containerForm {
     width: 900px;
     height: 650px;
-    margin: 5% auto;
+    margin-left: auto;
+    
     position: relative;
+    
   }
   .containerForm .map {
     width: 45%;
-    float: left;
+    float: right;
   }
   .containerForm .contact-form {
     width: 53%;
     margin-left: 2%;
-    float: left;
+    float: right;
   }
   .containerForm .contact-form .title {
     font-size: 2.5em;
@@ -39,7 +41,7 @@
     color: #242424;
   }
   .containerForm .contact-form .btn-send {
-    background: #A383C9;
+    background: #2185d0;
     width: 180px;
     height: 60px;
     color: #FFFFFF;
@@ -48,6 +50,6 @@
     border: none;
   }
   .mapGoogle{
-    
+    float: right;
   }
   

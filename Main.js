@@ -10,6 +10,7 @@ import biblio1 from './img/biblio1.jpg';
 import biblio2 from './img/biblio2.jpg';
 import biblio3 from './img/biblio3.jpg';
 import Contact from './Contact';
+import About from './About';
 
 class Main extends Component {
 
@@ -20,6 +21,7 @@ class Main extends Component {
                 <Route path="/Books" component={Book} />
                 <Route path="/Login" component={Login} />
                 <Route path="/Contact" component={Contact} />
+                <Route path="/About" component={About} />
 
             </main>
         );
